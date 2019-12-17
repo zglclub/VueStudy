@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--v-once不会动态渲染-->
+    <div id="app">
+        <h1 v-once>{{message + '' + firtsname}}</h1>
+        <h2>{{message}}</h2>
+        <h2 v-pre>{{message}}</h2>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+        const app=  new Vue({
+            el:"#app",
+            data:{
+                message:"你好呀！",
+                firtsname:"zhangsan"
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app" v-cloak>
+    {{message}}
+    <h1 v-html="url">{{url}}</h1>
+    <h2 v-text="url"></h2>
+    <h3>加载中</h3>
+    <h5>{{funllName}}fvc </h5>
+
+    <img v-bind:src="imgage" alt="">
+    <img :src="imgage" alt="" :id="img">
+
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    const app=  new Vue({
+        el:"#app",
+        data:{
+            message:"你好呀！",
+            url:"<a href='http://www.baidu.com'>百度</a> ",
+            imgage: "htto://sdvsdkvjsdv.com/img",
+            img:"home"
+        },
+        computed:{
+            funllName: function () {
+                this.message = "ghnghngh"
+            }
+        }
+    });
+</script>
+<script>
+</script>
+</body>
+</html>

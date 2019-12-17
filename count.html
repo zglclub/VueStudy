@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue</title>
+</head>
+<body>
+<!--
+vue 属性有 el 、data
+-->
+<div id="hello">
+    <div>
+        <h1>计数器：{{count}} </h1>
+        <button v-on:click="count++">+</button>
+        <button @click="add">加法</button>
+    </div>
+</div>
+<script src="js/vue.js"></script>
+<script>
+    const app =  new Vue({
+        el: "#hello",
+        data:{
+            count:0,
+        },
+        methods:{
+           add:function(){
+              this.count++
+           }
+        },
+        created: function () {
+            // `this` 指向 vm 实例
+            console.log('开始')
+        },
+        updated: function () {
+            console.log('修改')
+        },
+        mounted:function() {
+            console.log("mouny");
+        }
+    });
+</script>
+</body>
+</html>

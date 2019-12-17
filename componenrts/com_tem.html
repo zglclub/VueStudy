@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <test></test>
+</div>
+<template id="tem">
+    <div>
+        <h1>test</h1>
+    </div>
+</template>
+<script src="../js/vue.js"></script>
+<script>
+    const app=  new Vue({
+        el:"#app",
+        data:{
+            message:"你好呀！",
+        },
+        components: {
+            'test': {
+                template: '#tem'
+            }
+        }
+    });
+</script>
+</body>
+</html>

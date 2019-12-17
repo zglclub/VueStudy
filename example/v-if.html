@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <div id="test" v-if="show">{{message}}1</div>
+    <div id="test"v-else>{{message}}2</div>
+    <div id="test"></div>
+    {{message}}
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    const app=  new Vue({
+        el:"#app",
+        data:{
+            message:"你好呀！",
+            show:false
+        },
+        computed:{
+
+        },
+        method:{
+
+        }
+    });
+</script>
+</body>
+</html>
